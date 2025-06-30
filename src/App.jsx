@@ -21,7 +21,7 @@ function App() {
       {path:"Login",element:<Login/>},
       {path:"Cart",element:<ProtectedRoute><Cart/></ProtectedRoute>},
       {path:"Products",element:<ProtectedRoute><Products/></ProtectedRoute>},
-      {path:"ProductDetails/:id",element:<ProtectedRoute><ProductDetails/></ProtectedRoute>},
+      {path:"ProductDetails/:id/:category",element:<ProtectedRoute><ProductDetails/></ProtectedRoute>},
       {path:"Categories",element:<ProtectedRoute><Categories/></ProtectedRoute>},
       {path:"Brands",element:<ProtectedRoute><Brands/></ProtectedRoute>},
       {path:"*",element:<NotFoundPage/>},

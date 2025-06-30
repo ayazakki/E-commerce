@@ -20,7 +20,7 @@ export default function Navbar() {
     </Link>
       {token ?<ul className="flex gap-3.5 ms-7">
         <li>
-          <Link to="" className="text-gray-500 ">Home</Link>
+          <Link to="" className=" text-gray-500 ">Home</Link>
         </li>
         <li>
           <Link to="Cart" className="text-gray-500 ">Cart</Link>

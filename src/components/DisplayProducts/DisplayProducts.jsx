@@ -53,7 +53,7 @@ export default function DisplayProducts() {
               key={product._id}
               className="group overflow-hidden shadow-sm relative cursor-pointer"
             >
-              <Link to={`/ProductDetails/${product._id}`}>
+              <Link to={`/ProductDetails/${product._id}/${product.category.name}`}>
               <img src={product.imageCover} alt={product.title} />
               <div className="card-body p-3">
                 <h3 className="text-green-600">{product.category.name}</h3>
