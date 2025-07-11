@@ -49,7 +49,8 @@ export default function Login() {
   })
 
   return <>
-  <form onSubmit={loginForm.handleSubmit} className="container pt-28 mt-10 mb-20">
+  <div className="h-screen">
+    <form onSubmit={loginForm.handleSubmit} className="container pt-28 mt-10 mb-20">
   {errorMsg && succesMsg!="success" ?<div className="p-4 mb-4 text-sm text-center text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
     {errorMsg}
   </div>:null}
@@ -88,6 +89,7 @@ export default function Login() {
   <span className='cursor-pointer text-sm ms-4 text-gray-500 hover:text-emerald-700'>Forget password ?</span>
   </Link>
 </form>
+  </div>
 
   </>
   
