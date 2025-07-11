@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Style from "./Navbar.module.css";
 import Logo from "../../assets/logo.svg";
 import { Link, useNavigate } from "react-router-dom";
@@ -7,6 +7,8 @@ import { cartContext } from "../../Context/CartContextProvider";
 export default function Navbar() {
   const { token, setToken } = useContext(authContext);
   let { numOfCart, getCart } = useContext(cartContext);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   useEffect(() => {
     getCart();
   }, []);
@@ -26,11 +28,10 @@ export default function Navbar() {
             <img src={Logo} />
           </Link>
           <button
-            data-collapse-toggle="navbar-default"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
             type="button"
             className="cursor-pointer ms-auto inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-            aria-controls="navbar-default"
-            aria-expanded="false"
+
           >
             <span class="sr-only">Open main menu</span>
             <svg
@@ -50,8 +51,8 @@ export default function Navbar() {
             </svg>
           </button>
           <div
-              className="py-1.5 absolute top-full left-0 w-full bg-gray-100 dark:bg-gray-900 transition-all duration-500 ease-in-out overflow-hidden hidden md:flex md:relative "
-              id="navbar-default"
+              className={`${isMenuOpen ? 'block' : 'hidden'} py-1.5 absolute top-full left-0 w-full bg-gray-100 dark:bg-gray-900 transition-all duration-500 ease-in-out overflow-hidden md:flex md:relative `}
+              
             >
           {token ? (
               <ul className="flex flex-col md:flex-row gap-3.5 ms-7 text-center items-center">
