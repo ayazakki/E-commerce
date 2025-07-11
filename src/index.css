@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @plugin "flowbite/plugin";
 @custom-variant hover (&:hover);
+@custom-variant dark (&:where(.dark, .dark *));
 .container{
   @apply max-w-80 sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto
 }
