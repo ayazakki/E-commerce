@@ -137,7 +137,7 @@ export default function Navbar() {
               </>
             ) : (
               <>
-                <div className="ms-auto lg:ms-0">
+                <div className=" mx-auto lg:ms-0">
                   <span>
                   <Link to="Login" className="dark:text-gray-50 dark:hover:text-gray-300 text-gray-500 me-4 hover:text-gray-600 transition-colors duration-200">
                     Login
