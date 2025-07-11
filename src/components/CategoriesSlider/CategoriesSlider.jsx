@@ -1,18 +1,17 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import Style from "./CategoriesSlider.module.css"
 import Slider from 'react-slick';
-import axios from 'axios';
+import useFetchData from '../../Hooks/useFetchData';
+import LoadingScreen from '../LoadingScreen/LoadingScreen';
 
 export default function CategoriesSlider() {
-  const [categories, setCategories] = useState(null)
-  async function getCategories() {
-    let {data}=await axios.get("https://ecommerce.routemisr.com/api/v1/categories")
-    console.log(data.data);
-    setCategories(data.data)
-  }
-  useEffect(() => {
-    getCategories()
-  }, [])
+  let{data:categories,isLoading,isError}=useFetchData("categories","sliderCategories")
+  if(isLoading){
+      return <LoadingScreen/>
+    }
+    if(isError){
+      return <div className='mt-9 p-6 text-center bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700'>No products found <i className="fa-regular fa-face-sad-tear ms-1"></i></div>
+    }
   var settings = {
     dots: true,
     infinite: true,
@@ -51,7 +50,7 @@ export default function CategoriesSlider() {
     ]
   };
   return <>
-    <Slider {...settings} className='mt-24 container cursor-grab overflow-hidden'>
+    <Slider {...settings} className='mt-24 cursor-grab overflow-hidden container'>
       {categories?.map((category)=><div>
         <img src={category.image} className='h-[200px] object-cover w-100' alt={category.name} />
         <h2>{category.name}</h2>
