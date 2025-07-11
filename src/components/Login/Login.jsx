@@ -58,7 +58,7 @@ export default function Login() {
 </div>:null}
   <h1 className="text-2xl mb-5">Login Now :</h1>
   <div className="mb-5">
-    <label htmlFor="email" className="mb-2 block dark:text-white">email</label>
+    <label htmlFor="email" className="mb-2 block">email</label>
     <input
     name='email'
     value={loginForm.values.email}
@@ -70,7 +70,7 @@ export default function Login() {
   {loginForm.errors.email}
 </div>:null}
   <div className="mb-5">
-    <label htmlFor="password" className="mb-2 block dark:text-white">password</label>
+    <label htmlFor="password" className="mb-2 block">password</label>
     <input 
     name='password'
     value={loginForm.values.password}

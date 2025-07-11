@@ -8,7 +8,7 @@ export default function Footer() {
       <p className='text-gray-500 my-3'>We will send you a link, open it on your phone to download the app.</p>
       <div className="mb-6 flex items-center justify-center flex-col sm:flex-row">
         <input type="email" id="email" class="focus:border-gray-200 focus:ring-gray-200 h-10 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white " placeholder="Email..."  />
-      <button type="button" class=" mt-4 sm:mt-0 block me-auto ms-0 sm:ms-4 text-emerald-600 px-1.5 border-emerald-600 border-2 bg-white-600 hover:bg-emerald-700 hover:text-white cursor-pointer transition-colors duration-200 font-medium rounded-lg text-sm w-40 py-2 sm:me-2  dark:bg-green-600 dark:hover:bg-green-600">Share App Link</button>
+      <button type="button" class=" mt-4 sm:mt-0 block me-auto ms-0 sm:ms-4 text-emerald-600 dark:text-white px-1.5 border-emerald-600 border-2 bg-white-600 hover:bg-emerald-700 hover:text-white cursor-pointer transition-colors duration-200 font-medium rounded-lg text-sm w-40 py-2 sm:me-2  dark:bg-green-600 dark:hover:bg-green-600">Share App Link</button>
       </div>
       <hr className='text-neutral-300 mb-5' />
       <div className="flex  justify-between flex-col md:flex-row">

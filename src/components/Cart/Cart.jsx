@@ -172,13 +172,13 @@ export default function Cart() {
                   <span className="line-through text-sm font-medium text-red-500 me-2.5">
                   {product.price} EGP
                 </span>
-                <span className="font-medium text-sm text-emerald-900" >
+                <span className="font-medium text-sm text-emerald-900 dark:text-emerald-500" >
                   {
                     allProducts.find((p) => p._id === product.product._id).priceAfterDiscount
                   } EGP
                 </span>
                 </td>
-                </>:<td className="text-center"><span className="text-sm font-medium text-emerald-900">{product.price} EGP</span></td>}
+                </>:<td className="text-center"><span className="text-sm font-medium text-emerald-900 dark:text-emerald-500">{product.price} EGP</span></td>}
                       <td className="px-6 py-4">
                         <span
                           onClick={() =>

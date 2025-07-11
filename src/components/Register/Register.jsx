@@ -62,9 +62,9 @@ export default function Register() {
   {succesMsg?<div className=" text-center p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400" role="alert">
   {succesMsg}
 </div>:null}
-  <h1 className="text-2xl mb-5">Register Now :</h1>
+  <h1 className="text-2xl mb-5 ">Register Now :</h1>
   <div className="mb-5">
-    <label htmlFor="name" className="mb-2 block dark:text-white">name</label>
+    <label htmlFor="name" className="mb-2 block ">name</label>
     <input
     name='name'
     value={registerForm.values.name}
@@ -76,7 +76,7 @@ export default function Register() {
   {registerForm.errors.name}
 </div>:null}
   <div className="mb-5">
-    <label htmlFor="email" className="mb-2 block dark:text-white">email</label>
+    <label htmlFor="email" className="mb-2 block ">email</label>
     <input
     name='email'
     value={registerForm.values.email}
@@ -88,7 +88,7 @@ export default function Register() {
   {registerForm.errors.email}
 </div>:null}
   <div className="mb-5">
-    <label htmlFor="password" className="mb-2 block dark:text-white">password</label>
+    <label htmlFor="password" className="mb-2 block ">password</label>
     <input 
     name='password'
     value={registerForm.values.password}
@@ -134,7 +134,7 @@ export default function Register() {
 )}
 
   <div className="mb-5">
-    <label htmlFor="rePassword" className="mb-2 block dark:text-white">repassword</label>
+    <label htmlFor="rePassword" className="mb-2 block ">repassword</label>
     <input
     name='rePassword'
     value={registerForm.values.rePassword}
@@ -146,7 +146,7 @@ export default function Register() {
   {registerForm.errors.rePassword}
 </div>:null}
   <div className="mb-5">
-    <label htmlFor="phone" className="mb-2 block dark:text-white">Phone :</label>
+    <label htmlFor="phone" className="mb-2 block ">Phone :</label>
     <input
     name='phone'
     value={registerForm.values.phone}

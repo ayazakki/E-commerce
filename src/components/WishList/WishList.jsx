@@ -42,7 +42,7 @@ export default function WishList() {
     return <LoadingScreen/>
   }
   return <>
-<div className={`container ${products?.length=== 0 ?'h-screen':'h-auto'} mt-14 pt-12 `}>
+<div className={`container ${products?.length=== 0 ?'h-screen':'h-auto'} mt-20 pt-12 `}>
   {products?.length>0?<>
   <div className='relative overflow-x-auto shadow-md sm:rounded-lg'>
     <table className="hidden md:block w-full text-sm rtl:text-right text-gray-500 dark:text-gray-400">
@@ -81,13 +81,13 @@ export default function WishList() {
                   <span className="line-through text-sm font-medium text-red-500 me-2.5">
                   {product.price} EGP
                 </span>
-                <span className="font-medium text-sm text-emerald-900" >
+                <span className="font-medium text-sm text-emerald-900 dark:text-emerald-500" >
                   {
                     allProducts.find((p) => p._id === product._id).priceAfterDiscount
                   } EGP
                 </span>
                 </td>
-                </>:<td className="text-center"><span className="text-sm font-medium text-emerald-900">{product.price} EGP</span></td>}
+                </>:<td className="text-center"><span className="text-sm font-medium text-emerald-900 dark:text-emerald-500">{product.price} EGP</span></td>}
             <td className="px-6 py-4">
               <button onClick={()=>addToCartStatus(product._id)} class=" cursor-pointer relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-700 hover:text-gray-600 rounded-lg group bg-gradient-to-br from-teal-500 to-lime-100 group-hover:from-teal-500 group-hover:to-lime-100 dark:text-white dark:hover:text-gray-900">
     <span className="relative w-32  py-2 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-transparent group-hover:dark:bg-transparent">

@@ -57,7 +57,7 @@ export default function AllOrders() {
         </h4>
         <div className="font-medium text-gray-700 dark:text-gray-400">
           <h6 className='mb-2'>Quantity: {item.count}</h6>
-          <h6 >Price: <span className='text-emerald-700'>{item.price} EGP</span> </h6> 
+          <h6 >Price: <span className='text-emerald-700 dark:text-emerald-500'>{item.price} EGP</span> </h6> 
         </div>
         <div className="text-sm font-medium text-gray-600 dark:text-gray-400 mt-2">
           <h6 className='mb-2.5'>City: {item.orderDetails.city}</h6>  

@@ -50,38 +50,38 @@ export default function Navbar() {
             </svg>
           </button>
           <div
-              className="py-1.5 absolute top-full left-0 w-full bg-gray-100 transition-all duration-500 ease-in-out overflow-hidden hidden md:flex md:relative "
+              className="py-1.5 absolute top-full left-0 w-full bg-gray-100 dark:bg-gray-900 transition-all duration-500 ease-in-out overflow-hidden hidden md:flex md:relative "
               id="navbar-default"
             >
           {token ? (
               <ul className="flex flex-col md:flex-row gap-3.5 ms-7 text-center items-center">
                 <li>
-                  <Link to="" className=" text-gray-500 hover:text-gray-800">
+                  <Link to="" className=" text-gray-500 dark:text-gray-50 dark:hover:text-gray-300 hover:text-gray-800">
                     Home
                   </Link>
                 </li>
                 <li>
-                  <Link to="Cart" className="text-gray-500 hover:text-gray-800">
+                  <Link to="Cart" className="text-gray-500 dark:text-gray-50 dark:hover:text-gray-300 hover:text-gray-800">
                     Cart
                   </Link>
                 </li>
                 <li>
-                  <Link to="WishList" className="text-gray-500 hover:text-gray-800">
+                  <Link to="WishList" className="text-gray-500 dark:text-gray-50 dark:hover:text-gray-300 hover:text-gray-800">
                     Wish List
                   </Link>
                 </li>
                 <li>
-                  <Link to="Products" className="text-gray-500 hover:text-gray-800">
+                  <Link to="Products" className="text-gray-500 dark:text-gray-50 dark:hover:text-gray-300 hover:text-gray-800">
                     Products
                   </Link>
                 </li>
                 <li>
-                  <Link to="Categories" className="text-gray-500 hover:text-gray-800">
+                  <Link to="Categories" className="text-gray-500 dark:text-gray-50 dark:hover:text-gray-300 hover:text-gray-800">
                     Categories
                   </Link>
                 </li>
                 <li>
-                  <Link to="Brands" className="text-gray-500 hover:text-gray-800">
+                  <Link to="Brands" className="text-gray-500 dark:text-gray-50 dark:hover:text-gray-300 hover:text-gray-800">
                     Brands
                   </Link>
                 </li>
@@ -90,22 +90,22 @@ export default function Navbar() {
           <div className="flex ms-auto items-center">
             <ul className="hidden lg:flex gap-3.5 ms-auto me-4 ">
             <li>
-              <i className="fab fa-instagram cursor-pointer hover:text-gray-500 transition-colors duration-200"></i>
+              <i className="fab fa-instagram cursor-pointer dark:text-gray-50 dark:hover:text-gray-300 hover:text-gray-500 transition-colors duration-200"></i>
             </li>
             <li>
-              <i className="fab fa-facebook cursor-pointer hover:text-gray-500 transition-colors duration-200"></i>
+              <i className="fab fa-facebook cursor-pointer dark:text-gray-50 dark:hover:text-gray-300 hover:text-gray-500 transition-colors duration-200"></i>
             </li>
             <li>
-              <i className="fab fa-tiktok cursor-pointer hover:text-gray-500 transition-colors duration-200"></i>
+              <i className="fab fa-tiktok cursor-pointer dark:text-gray-50 dark:hover:text-gray-300 hover:text-gray-500 transition-colors duration-200"></i>
             </li>
             <li>
-              <i className="fab fa-twitter cursor-pointer hover:text-gray-500 transition-colors duration-200"></i>
+              <i className="fab fa-twitter cursor-pointer dark:text-gray-50 dark:hover:text-gray-300 hover:text-gray-500 transition-colors duration-200"></i>
             </li>
             <li>
-              <i className="fab fa-linkedin cursor-pointer hover:text-gray-500 transition-colors duration-200"></i>
+              <i className="fab fa-linkedin cursor-pointer dark:text-gray-50 dark:hover:text-gray-300 hover:text-gray-500 transition-colors duration-200"></i>
             </li>
             <li>
-              <i className="fab fa-youtube cursor-pointer hover:text-gray-500 transition-colors duration-200"></i>
+              <i className="fab fa-youtube cursor-pointer dark:text-gray-50 dark:hover:text-gray-300 hover:text-gray-500 transition-colors duration-200"></i>
             </li>
             
           </ul>
@@ -117,7 +117,7 @@ export default function Navbar() {
                     type="button"
                     className="ms-9 md:ms-0 mb-3 md:mb-0 cursor-pointer me-2 relative block md:inline-flex items-center font-medium text-center text-gray-700 rounded-lg "
                   >
-                    <i className="fa-solid fa-cart-shopping fa-lg "></i>
+                    <i className="fa-solid fa-cart-shopping fa-lg  dark:text-gray-50 dark:hover:text-gray-300"></i>
                     <span className="sr-only">Notifications</span>
                     <div className="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-emerald-600 border-2 border-white rounded-full -top-4.5 -end-4.5 dark:border-gray-900">
                       {numOfCart||0}
@@ -128,7 +128,7 @@ export default function Navbar() {
                     onClick={() => {
                       logout();
                     }}
-                    className="ps-3 md:ps-0 text-red-700 cursor-pointer md:ms-4.5"
+                    className="ps-3 md:ps-0 text-red-700 dark:text-red-500 cursor-pointer md:ms-4.5"
                   >
                     Logout
                     <i className="ms-2 fa-solid fa-arrow-right-from-bracket"></i>
@@ -139,12 +139,12 @@ export default function Navbar() {
               <>
                 <div className="ms-auto lg:ms-0">
                   <span>
-                  <Link to="Login" className="text-gray-500 me-4 hover:text-gray-600 transition-colors duration-200">
+                  <Link to="Login" className="dark:text-gray-50 dark:hover:text-gray-300 text-gray-500 me-4 hover:text-gray-600 transition-colors duration-200">
                     Login
                   </Link>
                 </span>
                 <span>
-                  <Link to="Register" className="text-gray-500 hover:text-gray-600 transition-colors duration-200">
+                  <Link to="Register" className="dark:text-gray-50 dark:hover:text-gray-300 text-gray-500 hover:text-gray-600 transition-colors duration-200">
                     Register
                   </Link>
                 </span>
