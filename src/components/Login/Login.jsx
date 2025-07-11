@@ -57,27 +57,27 @@ export default function Login() {
   {succesMsg?<div className=" text-center p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400" role="alert">
   {succesMsg}
 </div>:null}
-  <h1 className="text-2xl mb-5">Login Now :</h1>
+  <h1 className="text-2xl mb-5 dark:text-gray-50">Login Now :</h1>
   <div className="mb-5">
-    <label htmlFor="email" className="mb-2 block">email</label>
+    <label htmlFor="email" className="mb-2 block dark:text-gray-50">email</label>
     <input
     name='email'
     value={loginForm.values.email}
     onChange={loginForm.handleChange}
     onBlur={loginForm.handleBlur}
-    type="email" id="email" className="focus:border-gray-200 focus:ring-gray-200 outline-0 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white" />
+    type="email" id="email" className="focus:border-gray-200 focus:ring-gray-200 outline-0 border border-gray-300 dark:border-gray-50 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:text-white" />
   </div>
   {loginForm.errors.email && loginForm.touched.email?<div className="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
   {loginForm.errors.email}
 </div>:null}
   <div className="mb-5">
-    <label htmlFor="password" className="mb-2 block">password</label>
+    <label htmlFor="password" className="mb-2 block dark:text-gray-50">password</label>
     <input 
     name='password'
     value={loginForm.values.password}
     onChange={loginForm.handleChange}
     onBlur={loginForm.handleBlur}
-    type="password" id="password" className="focus:border-gray-200 focus:ring-gray-200 outline-0 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white" />
+    type="password" id="password" className="dark:border-gray-50 focus:border-gray-200 focus:ring-gray-200 outline-0 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:text-white" />
   </div>
   {loginForm.errors.password && loginForm.touched.password?<div className="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
   {loginForm.errors.password}
@@ -86,7 +86,7 @@ export default function Login() {
     {isLoading?<i className='fas fa-spin fa-spinner'></i>:"Login"}
   </button>
   <Link to={"/ForgetPassword"}>
-  <span className='cursor-pointer text-sm ms-4 text-gray-500 hover:text-emerald-700'>Forget password ?</span>
+  <span className='cursor-pointer text-sm ms-4 text-gray-500 hover:text-emerald-700 dark:text-gray-50 dark:hover:text-emerald-300'>Forget password ?</span>
   </Link>
 </form>
   </div>

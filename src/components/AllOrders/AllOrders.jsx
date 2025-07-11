@@ -38,7 +38,7 @@ export default function AllOrders() {
   return <>
   
   <div className="container mt-14 pt-14">
-  <h2 className="text-3xl mb-6 mt-7">All Ordered Items</h2>
+  <h2 className="text-3xl mb-6 mt-7 dark:text-gray-50">All Ordered Items</h2>
 
   <div className="grid gap-6">
   {orderItems.map((item) => (

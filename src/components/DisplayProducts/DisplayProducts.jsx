@@ -74,14 +74,14 @@ if(isError){
   return (
     <>
       <div className="container mt-32 mb-10">
-      <input value={search} onChange={e=>setSearch(e.target.value)} type="text" placeholder="search..." class="focus:border-gray-200 focus:ring-gray-200 w-[92%] bg-gray-50/30 border border-gray-300 text-gray-900 text-sm rounded-lg block mx-auto p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"/>
+      <input value={search} onChange={e=>setSearch(e.target.value)} type="text" placeholder="search..." class="focus:border-gray-200 focus:ring-gray-200 w-[92%] bg-gray-50/30 border border-gray-300 text-gray-900 text-sm rounded-lg block mx-auto p-2.5 dark:bg-gray-700 dark:border-gray-50 dark:placeholder-gray-400 dark:text-white"/>
         </div>
         
         <div className=" container grid gap-3.5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
           {filtered?.map((product) => (
             <div
               key={product._id}
-              className="group overflow-hidden shadow-sm relative cursor-pointer"
+              className="group overflow-hidden shadow-sm relative cursor-pointer dark:bg-gray-600"
             >
               <Link
                 to={`/ProductDetails/${product._id}/${product.category.name}`}
@@ -90,10 +90,10 @@ if(isError){
                 <div className="card-body p-3">
                   <div className="flex justify-between items-center">
                     <div>
-                      <h3 className="text-green-600">
+                      <h3 className="text-green-600 dark:text-emerald-500">
                         {product.category.name}
                       </h3>
-                      <h2>{product.title.split(" ", 2).join(" ")}</h2>
+                      <h2 className="dark:text-gray-200">{product.title.split(" ", 2).join(" ")}</h2>
                     </div>
                   </div>
                   <div className="flex justify-between pt-3.5">
@@ -102,14 +102,14 @@ if(isError){
                         <h3 className="text-red-400 line-through text-sm font-medium">
                           {product.price} EGP
                         </h3>
-                        <h3 className="text-sm">
+                        <h3 className="text-sm dark:text-gray-200">
                           {product.priceAfterDiscount} EGP
                         </h3>
                       </>
                     ) : (
-                      <h3 className="text-md">{product.price} EGP</h3>
+                      <h3 className="text-md dark:text-gray-200">{product.price} EGP</h3>
                     )}
-                    <span className="text-gray-400">
+                    <span className="text-gray-400 dark:text-gray-300">
                       <i className="fa-solid fa-star text-amber-300 me-0.5"></i>
                       {product.ratingsAverage}
                     </span>

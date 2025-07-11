@@ -53,7 +53,7 @@ export default function CategoriesSlider() {
     <Slider {...settings} className='mt-24 cursor-grab overflow-hidden container'>
       {categories?.map((category)=><div>
         <img src={category.image} className='h-[200px] object-cover w-100' alt={category.name} />
-        <h2>{category.name}</h2>
+        <h2 className='dark:text-gray-50 pt-3 text-gray-500'>{category.name}</h2>
       </div>)}
     </Slider>
   </>

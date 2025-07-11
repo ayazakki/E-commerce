@@ -63,39 +63,39 @@ export default function Register() {
   {succesMsg?<div className=" text-center p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400" role="alert">
   {succesMsg}
 </div>:null}
-  <h1 className="text-2xl mb-5 ">Register Now :</h1>
+  <h1 className="text-2xl mb-5 dark:text-gray-50">Register Now :</h1>
   <div className="mb-5">
-    <label htmlFor="name" className="mb-2 block ">name</label>
+    <label htmlFor="name" className="mb-2 block dark:text-gray-50">name</label>
     <input
     name='name'
     value={registerForm.values.name}
     onChange={registerForm.handleChange}
     onBlur={registerForm.handleBlur}
-    type="text" id="name" className="focus:border-gray-200 focus:ring-gray-200 outline-0 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white" />
+    type="text" id="name" className="focus:border-gray-200 focus:ring-gray-200 outline-0 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-50 dark:text-white" />
   </div>
   {registerForm.errors.name && registerForm.touched.name?<div className="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
   {registerForm.errors.name}
 </div>:null}
   <div className="mb-5">
-    <label htmlFor="email" className="mb-2 block ">email</label>
+    <label htmlFor="email" className="mb-2 block dark:text-gray-50">email</label>
     <input
     name='email'
     value={registerForm.values.email}
     onChange={registerForm.handleChange}
     onBlur={registerForm.handleBlur}
-    type="email" id="email" className="focus:border-gray-200 focus:ring-gray-200 outline-0 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white" />
+    type="email" id="email" className="focus:border-gray-200 focus:ring-gray-200 outline-0 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-50 dark:text-white" />
   </div>
   {registerForm.errors.email && registerForm.touched.email?<div className="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
   {registerForm.errors.email}
 </div>:null}
   <div className="mb-5">
-    <label htmlFor="password" className="mb-2 block ">password</label>
+    <label htmlFor="password" className="mb-2 block dark:text-gray-50">password</label>
     <input 
     name='password'
     value={registerForm.values.password}
     onChange={registerForm.handleChange}
     onBlur={registerForm.handleBlur}
-    type="password" id="password" className="focus:border-gray-200 focus:ring-gray-200 outline-0 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white" />
+    type="password" id="password" className="focus:border-gray-200 focus:ring-gray-200 outline-0 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-50 dark:text-white" />
   </div>
 {registerForm.errors.password && registerForm.touched.password && (
   registerForm.errors.password === "invalid" ? (
@@ -135,25 +135,25 @@ export default function Register() {
 )}
 
   <div className="mb-5">
-    <label htmlFor="rePassword" className="mb-2 block ">repassword</label>
+    <label htmlFor="rePassword" className="mb-2 block dark:text-gray-50 ">repassword</label>
     <input
     name='rePassword'
     value={registerForm.values.rePassword}
     onChange={registerForm.handleChange}
     onBlur={registerForm.handleBlur}
-    type="password" id="rePassword" className="focus:border-gray-200 focus:ring-gray-200 outline-0 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white" />
+    type="password" id="rePassword" className="focus:border-gray-200 focus:ring-gray-200 outline-0 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-50 dark:text-white" />
   </div>
   {registerForm.errors.rePassword && registerForm.touched.rePassword?<div className="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
   {registerForm.errors.rePassword}
 </div>:null}
   <div className="mb-5">
-    <label htmlFor="phone" className="mb-2 block ">Phone :</label>
+    <label htmlFor="phone" className="mb-2 block dark:text-gray-50">Phone :</label>
     <input
     name='phone'
     value={registerForm.values.phone}
     onChange={registerForm.handleChange}
     onBlur={registerForm.handleBlur}
-    type="tel" id="phone" className="focus:border-gray-200 focus:ring-gray-200 outline-0 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white" />
+    type="tel" id="phone" className="focus:border-gray-200 focus:ring-gray-200 outline-0 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-50 dark:text-white" />
   </div>
     {registerForm.errors.phone && registerForm.touched.phone?<div className="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
   {registerForm.errors.phone}

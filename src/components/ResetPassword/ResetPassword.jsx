@@ -41,20 +41,20 @@ export default function ResetPassword() {
   })
   return <>
     <div className="container mt-32 pt-14 h-screen">
-      <h1 className='mb-3.5'>Please reset your account password:</h1>
+      <h1 className='mb-3.5 dark:text-gray-50'>Please reset your account password:</h1>
       <form onSubmit={resetPasswordForm.handleSubmit}>
-        <label>Email:</label>
+        <label className='dark:text-gray-50'>Email:</label>
         <input
       value={resetPasswordForm.values.email}
       onChange={resetPasswordForm.handleChange}
       name='email'
-      type="email" id="email" className="mb-3.5 outline-0 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white" />
-      <label>New Password:</label>
+      type="email" id="email" className="mb-3.5 outline-0 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-50 dark:text-white" />
+      <label className='dark:text-gray-50'>New Password:</label>
       <input
       value={resetPasswordForm.values.newPassword}
       onChange={resetPasswordForm.handleChange}
       name='newPassword'
-      type="password" id="newPassword" className="mb-3.5 outline-0 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white" />
+      type="password" id="newPassword" className="mb-3.5 outline-0 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-50 dark:text-white" />
       {resetPasswordForm.errors.newPassword && resetPasswordForm.touched.newPassword && (
   resetPasswordForm.errors.newPassword === "invalid" ? (
     <div

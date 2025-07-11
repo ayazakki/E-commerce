@@ -28,7 +28,7 @@ export default function Brands() {
   }
   if(isError){
     return <div className="h-screen flex justify-center items-center">
-      <div className='mt-20 w-full p-6 text-center bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700'>No products found <i className="fa-regular fa-face-sad-tear ms-1"></i></div>
+      <div className='mt-20 w-full p-6 text-center bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100 dark:text-gray-50 dark:bg-gray-500 dark:border-gray-500 dark:hover:bg-gray-400'>No brands found <i className="fa-regular fa-face-sad-tear ms-1"></i></div>
     </div>
   }
   return <>

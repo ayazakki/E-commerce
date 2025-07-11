@@ -139,7 +139,7 @@ export default function Payment() {
           {paymentForm.errors.city && paymentForm.touched.city?<div className="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
             {paymentForm.errors.city}
           </div>:null}
-          <div className="flex justify-between">
+          <div className="flex flex-wrap justify-between">
             <div className="div">
             <button
           onClick={()=>setCashFlag(true)}
@@ -150,8 +150,8 @@ export default function Payment() {
           </button>
           <button onClick={()=>setCashFlag(false)} type="submit" className="cursor-pointer text-white bg-green-700 hover:bg-green-800 focus:ring-4 font-medium rounded-lg text-sm w-[100px] px-5 py-2 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Online</button>
           </div>
-          <Link to={"/AllOrders"}>
-          <span className="cursor-pointer hover:underline text-emerald-800">Want to take a look about your previous orders?</span>
+          <Link to={"/AllOrders"} className="pt-5 lg:pt-0">
+          <span className=" cursor-pointer hover:underline text-emerald-800 dark:text-emerald-500">Do you want to take a look about your previous orders?</span>
           </Link>
           </div>
         </div>
