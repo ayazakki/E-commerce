@@ -55,7 +55,6 @@ export default function Register() {
   })
 
   return <>
-  <div className="h-screen">
     <form onSubmit={registerForm.handleSubmit} className="container pt-28 ">
   {errorMsg && succesMsg!="success" ?<div className="p-4 mb-4 text-sm text-center text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
     {errorMsg}
@@ -162,7 +161,7 @@ export default function Register() {
     {isLoading?<i className='fas fa-spin fa-spinner'></i>:"Register"}
   </button>
 </form>
-  </div>
+  
 
   </>
   
